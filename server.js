@@ -19,6 +19,7 @@ const db = require('./config/db')
 // require configured passport authentication middleware
 const auth = require('./lib/auth')
 
+
 // define server and client ports
 // used for cors and local port declaration
 const serverDevPort = 4741
@@ -68,6 +69,7 @@ app.use(userRoutes)
 // note that this comes after the route middlewares, because it needs to be
 // passed any error messages from them
 app.use(errorHandler)
+
 
 // run API on designated port (4741 in this case)
 app.listen(port, () => {
