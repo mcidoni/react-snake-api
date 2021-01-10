@@ -26,6 +26,21 @@ V1 (MVP):
 - Node.js
 - Mongoose
 
+## Routes
+
+#### User Routes:
+
+- SIGN-UP/SIGN-IN (POST)
+- CHANGE PASSWORD (PATCH)
+- SIGN-OUT (DELETE)
+
+#### Game Routes:
+
+CREATE SCORE (POST)
+UPDATE SCORE (PATCH)
+VIEW ALL SCORES (READ)
+DELETE SCORE (DELETE)
+
 ## Future Development
 
 V2: 
