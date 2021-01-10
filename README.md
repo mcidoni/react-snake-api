@@ -36,10 +36,10 @@ V1 (MVP):
 
 #### Game Routes:
 
-CREATE SCORE (POST)
-UPDATE SCORE (PATCH)
-VIEW ALL SCORES (READ)
-DELETE SCORE (DELETE)
+- CREATE SCORE (POST)
+- UPDATE SCORE (PATCH)
+- VIEW ALL SCORES (READ)
+- DELETE SCORE (DELETE)
 
 ## Future Development
 
@@ -57,8 +57,13 @@ V2:
 
 ## Wireframes
 
-[Imgur](https://i.imgur.com/48XnSF3.png)
-[Imgur](https://i.imgur.com/4pvh0VV.png)
+- [Imgur](https://i.imgur.com/48XnSF3.png)
+- [Imgur](https://i.imgur.com/4pvh0VV.png)
+
+## ERD
+
+[Imgur](https://i.imgur.com/T5YkmyN.png)
+
 
 ## Important Links
 
