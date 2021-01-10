@@ -16,20 +16,26 @@ const requireToken = passport.authenticate('bearer', { session: false })
 
 const router = express.Router()
 
+router.get('/test', (req, res, next) => {
+  res.json({a: 1})
+})
+
 // INDEX
 // GET /scores
-router.get('/scores', requireToken, (req, res, next) => {
-  Scores.find()
+router.get('/scores', (req, res, next) => {
+  Score.find()
     .then(scores => {
       return scores.map(scores => scores.toObject())
     })
-    .then(scores => res.status(200).json({ scores: scores }))
+    .then(scores => {
+      res.json({ scores })
+    })
     .catch(next)
 })
 
 // SHOW
 router.get('/scores/:id', requireToken, (req, res, next) => {
-  scores.findById(req.params.id)
+  Score.findById(req.params.id)
     .then(handle404)
     .then(scores => res.status(200).json({ scores: scores.toObject() }))
     .catch(next)
@@ -49,28 +55,28 @@ router.post('/scores', (req, res, next) => {
 
 
 // UPDATE
-router.patch('/scores/:id', requireToken, removeBlanks, (req, res, next) => {
+router.patch('/scores/:id', (req, res, next) => {
   delete req.body.score.owner
 
   Score.findById(req.params.id)
     .then(handle404)
     .then(score => {
-      requireOwnership(req, score)
+      // requireOwnership(req, score)
 
       return score.updateOne(req.body.score)
     })
-    .then(() => res.sendStatus(204))
+    .then(res.sendStatus(204))
     .catch(next)
 })
 
 // DESTROY
 // DELETE /scores/5a7db6c74d55bc51bdf39793
-router.delete('/scores/:id', requireToken, (req, res, next) => {
+router.delete('/scores/:id', (req, res, next) => {
   Score.findById(req.params.id)
     .then(handle404)
     .then(score => {
       // throw an error if current user doesn't own `score`
-      requireOwnership(req, score)
+      // requireOwnership(req, score)
       // delete the score ONLY IF the above didn't throw
       score.deleteOne()
     })
