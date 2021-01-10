@@ -138,11 +138,4 @@ router.delete('/sign-out', requireToken, (req, res, next) => {
     .catch(next)
 })
 
-router.get('/scores', (req, res) => {
-  // get logged in user's scores and populate array with those scores (reaplace 1,2,3)
-  res.json({
-    scores: [1, 2, 3]
-  })
-})
-
 module.exports = router
