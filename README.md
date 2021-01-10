@@ -1,6 +1,6 @@
 ## Snake.js
 
-Welcome to Snek.js! This is my take on the classic snake game that was popularized on Nokia's older phones. I designed this to have a whimiscal look, and to be easy to use for all users!
+Welcome to Snek.js! This is my take on the classic snake game that was popularized on Nokia's older phones. I designed this to have a whimiscal look, and to be easy to use for all users! For this project, it initally started out much bigger, but due to time constraints I had to scope down a lot for MVP. Diving deeper into react was a learning process in itself, and I enjoyed it and even though the MVP does not achieve my original goal, it is functional and does what it is supposed to!
 
 ## How To Play
 
